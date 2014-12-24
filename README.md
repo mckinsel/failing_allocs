@@ -41,12 +41,8 @@ If anything goes wrong, it should free any allocated memory and return
 a null pointer.
 
 ```cpp
-#include "failing_allocs.h"
-
 #include <assert.h>
 #include <stdlib.h>
-
-USE_FAILING_ALLOCS
 
 typedef struct{
   int* some_ints;
