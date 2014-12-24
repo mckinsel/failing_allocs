@@ -1,5 +1,5 @@
-#ifndef _FAILING_ALLOC_H
-#define _FAILING_ALLOC_H
+#ifndef _failing_alloc_h
+#define _failing_alloc_h
 
 /* Required for RTLD_NEXT. */
 #define _GNU_SOURCE
