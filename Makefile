@@ -4,10 +4,16 @@ LDLIBS=-ldl
 TEST_SRC=$(wildcard tests/*_tests.c)
 TESTS=$(patsubst %.c,%,$(TEST_SRC))
 
-all: test
+EXAMPLE_SRC=$(wildcard examples/*.c)
+EXAMPLES=$(patsubst %.c,%,$(EXAMPLE_SRC))
 
-test: $(TESTS)
+all: examples tests
+
+tests: $(TESTS)
+
+examples: $(EXAMPLES)
 
 .PHONY: clean
 clean:
 	rm  -rf $(TESTS)
+	rm  -rf $(EXAMPLES)
